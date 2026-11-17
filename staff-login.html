@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBasket | Staff Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="staff-login">
+    <div class="page-shell narrow-shell">
+      <header class="topbar compact-topbar">
+        <div class="brand-wrap">
+          <div class="brand-copy brand-text-logo">
+            <span class="brand-bold">Green</span>
+            <span class="brand-light">Basket</span>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main menu">
+          <a class="nav-link" href="index.html">Home</a>
+          <button class="nav-link theme-toggle" data-theme-toggle type="button">Dark / Light</button>
+          <a class="nav-link" href="applications.html">Applications</a>
+          <a class="nav-link" href="settings.html">Settings</a>
+        </nav>
+      </header>
+
+      <main class="panel-card auth-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Restricted access</p>
+            <h1>Staff Login</h1>
+          </div>
+          <a class="secondary-btn" href="index.html">Back</a>
+        </div>
+
+        <form id="staff-login-form" class="auth-form">
+          <div class="field-group">
+            <label for="staffEmail">Email</label>
+            <input id="staffEmail" type="email" placeholder="name@greenbasket.com" required />
+          </div>
+          <div class="field-group">
+            <label for="staffPassword">Password</label>
+            <input id="staffPassword" type="password" placeholder="Enter password" required />
+          </div>
+          <button class="primary-btn large-btn" type="submit">Login to staff panel</button>
+        </form>
+
+      </main>
+    </div>
+
+    <footer class="footer-bar">
+      <a href="terms.html">Terms of Service</a>
+      <a href="policy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

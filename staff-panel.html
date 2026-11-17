@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBasket | Staff Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="staff-panel">
+    <div class="site-shell wide-shell">
+      <header class="site-header compact-header">
+        <div class="brand" aria-label="GreenBasket home">
+          <div class="brand-copy brand-text-logo">
+            <span class="brand-bold">Green</span>
+            <span class="brand-light">Basket</span>
+          </div>
+        </div>
+
+        <nav class="site-nav" aria-label="Main menu">
+          <a href="index.html">Home</a>
+          <button class="theme-toggle" data-theme-toggle type="button">Dark / Light</button>
+          <a href="applications.html">Applications</a>
+          <a href="settings.html">Settings</a>
+        </nav>
+      </header>
+
+      <main class="panel-surface staff-layout">
+        <div class="section-header interior-header">
+          <div>
+            <p class="section-kicker">Admin dashboard</p>
+            <h1>Staff panel</h1>
+          </div>
+          <div class="badge-row">
+            <span id="user-badge" class="user-badge">Guest</span>
+            <button class="secondary-btn" id="logout-btn" type="button">Log out</button>
+          </div>
+        </div>
+
+        <div class="staff-grid">
+          <section class="panel-section">
+            <h2>Application controls</h2>
+            <div class="application-controls">
+              <button id="open-applications-btn" class="primary-btn" type="button">Open applications</button>
+              <button id="close-applications-btn" class="secondary-btn" type="button">Close applications</button>
+            </div>
+            <div class="status-pill-wrap">
+              <span id="applications-status-pill" class="status-pill open">Open</span>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <h2>Notifications</h2>
+            <div id="notification-list" class="notification-list"></div>
+          </section>
+        </div>
+
+        <section class="panel-section">
+          <h2>Applications</h2>
+          <div id="application-table-body" class="application-list"></div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Application details</h2>
+          <div id="application-details" class="application-details-empty">Select an application to review it.</div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Staff accounts</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="staff-table-body"></tbody>
+            </table>
+          </div>
+
+          <form id="staff-create-form" class="staff-form staff-creator">
+            <div class="field-row two-up">
+              <div class="field-group">
+                <label for="newStaffEmail">Staff email</label>
+                <input id="newStaffEmail" type="email" placeholder="staff@greenbasket.com" required />
+              </div>
+              <div class="field-group">
+                <label for="newStaffRole">Role</label>
+                <select id="newStaffRole">
+                  <option value="Manager">Manager</option>
+                  <option value="Cashier">Cashier</option>
+                  <option value="Supervisor">Supervisor</option>
+                  <option value="Support">Support</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="newStaffPassword">Password</label>
+              <input id="newStaffPassword" type="password" placeholder="Create password" required />
+            </div>
+
+            <button class="primary-btn" type="submit">Create staff account</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer-bar">
+      <a href="terms.html">Terms of Service</a>
+      <a href="policy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

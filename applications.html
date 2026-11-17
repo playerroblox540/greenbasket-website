@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBasket | Applications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="applications">
+    <div class="site-shell thin-shell">
+      <header class="site-header compact-header">
+        <div class="brand" aria-label="GreenBasket home">
+          <div class="brand-copy brand-text-logo">
+            <span class="brand-bold">Green</span>
+            <span class="brand-light">Basket</span>
+          </div>
+        </div>
+
+        <nav class="site-nav" aria-label="Main menu">
+          <a href="index.html">Home</a>
+          <button class="theme-toggle" data-theme-toggle type="button">Dark / Light</button>
+          <a href="settings.html">Settings</a>
+          <a id="staff-link" href="staff-login.html">Staff Login</a>
+        </nav>
+      </header>
+
+      <main class="panel-surface">
+        <div class="section-header interior-header">
+          <div>
+            <p class="section-kicker">Join the team</p>
+            <h1>Application form</h1>
+          </div>
+          <a class="secondary-btn" href="index.html">Main menu</a>
+        </div>
+
+        <div id="public-auth-container" class="social-signin">
+          <p>Sign in with Roblox or Discord first to continue.</p>
+          <div class="signin-row">
+            <button class="primary-btn" type="button" data-login-method="roblox">Continue with Roblox</button>
+            <button class="secondary-btn" type="button" data-login-method="discord">Continue with Discord</button>
+          </div>
+        </div>
+
+        <div id="public-status-banner" class="status-banner hidden" aria-live="polite">
+          <div class="status-topline">
+            <span class="status-dot"></span>
+            <strong id="application-status-label">Applications are currently open</strong>
+          </div>
+          <p id="application-status-copy">You are signed in and can continue with the application form.</p>
+        </div>
+
+        <form id="public-application-form" class="public-application-form hidden"></form>
+      </main>
+    </div>
+
+    <footer class="footer-bar">
+      <a href="terms.html">Terms of Service</a>
+      <a href="policy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
